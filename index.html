@@ -3,29 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RadManagement LLC | Clinical Imaging & Radiology Solutions</title>
-  <meta name="description" content="Optimizing & Automating Imaging Workflows. Unified platform for clinical imaging applications, protocoling, downtime notifications, staff scheduling, and regulatory compliance." />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>RadManagement LLC | Clinical Imaging &amp; Radiology Solutions</title>
+  <meta name="description" content="Optimizing &amp; Automating Imaging Workflows. Unified platform for clinical imaging applications, protocoling, downtime notifications, staff scheduling, and regulatory compliance." />
+  <link rel="canonical" href="https://radmgmt.org/" />
 
-  <!-- Inline SVG Favicon (RM Aperture Brain Emblem) & Open Graph Metadata -->
+  <!-- Inline SVG Favicon (RM Aperture Brain Emblem) & Open Graph / Twitter Metadata -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='18' fill='%23071427'/%3E%3Ccircle cx='40' cy='40' r='32' stroke='%2316A3B8' stroke-width='4' fill='none'/%3E%3Ccircle cx='40' cy='40' r='21' fill='%230B1F3A' stroke='%2338BDF8' stroke-width='2'/%3E%3Cpath d='M38.2 25.5 C34.8 25.5 32.3 27.6 31.7 30.5 C29.2 31.2 27.6 33.5 28 36.1 C26.5 37.7 26.5 40.5 28 42.2 C27.4 44.7 28.8 47.3 31.4 48.3 C31.9 51.1 34.7 53.2 38.2 53 V25.5 Z' fill='%23FFFFFF'/%3E%3Cpath d='M41.8 25.5 C45.2 25.5 47.7 27.6 48.3 30.5 C50.8 31.2 52.4 33.5 52 36.1 C53.5 37.7 53.5 40.5 52 42.2 C52.1 42.7 52.1 43.2 52 43.6 H46.1 V49 H41.8 V25.5 Z' fill='%23FFFFFF'/%3E%3Crect x='46.1' y='46.1' width='10.4' height='3.4' rx='1' fill='%2338BDF8'/%3E%3Crect x='49.6' y='42.6' width='3.4' height='10.4' rx='1' fill='%2338BDF8'/%3E%3C/svg%3E" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="RadManagement LLC" />
   <meta property="og:title" content="RadManagement LLC | Clinical Imaging &amp; Radiology Solutions" />
   <meta property="og:description" content="Optimizing &amp; Automating Imaging Workflows. Unified platform for clinical imaging applications, protocoling, downtime alerts, credentialing, and regulatory compliance." />
-  <meta property="og:url" content="https://radmanagement.org" />
+  <meta property="og:url" content="https://radmgmt.org/" />
+  <meta property="og:image" content="https://radmgmt.org/og-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="RadManagement LLC — Clinical Imaging &amp; Radiology Solutions" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RadManagement LLC | Clinical Imaging &amp; Radiology Solutions" />
+  <meta name="twitter:description" content="Optimizing &amp; Automating Imaging Workflows. Unified platform for clinical imaging applications, protocoling, downtime alerts, credentialing, and regulatory compliance." />
+  <meta name="twitter:image" content="https://radmgmt.org/og-preview.png" />
 
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
 
+  <!-- Critical Brand Fallback Styles (Resilient if CDN is throttled on hospital networks) -->
+  <style>
+    .bg-navy { background-color: #0B1F3A; }
+    .bg-navy-dark { background-color: #071427; }
+    .bg-teal-surgical { background-color: #16A3B8; }
+    .text-teal-surgical { color: #16A3B8; }
+    .text-cyan-diagnostic { color: #38BDF8; }
+    .bg-ice { background-color: #F4F7FA; }
+  </style>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Tailwind Design System Configuration -->
+  <!-- Tailwind Design System Configuration (Guarded against late/blocked CDN load) -->
   <script>
-    tailwind.config = {
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
       theme: {
         extend: {
           colors: {
@@ -72,10 +92,10 @@
   <!-- 1. STICKY SITE HEADER (Deep Clinical Navy & RM Aperture Brain Logo)   -->
   <!-- ===================================================================== -->
   <header class="sticky top-0 z-40 bg-navy/95 backdrop-blur-md text-white border-b border-white/10 shadow-md">
-    <div class="w-full px-4 sm:px-6 lg:px-10 xl:px-12 h-20 flex items-center justify-between gap-4">
+    <div class="w-full px-3 sm:px-6 lg:px-10 xl:px-12 h-20 flex items-center justify-between gap-2.5 sm:gap-4">
       <!-- Brand Logo Lockup (Routes to Home Overview) -->
-      <a href="#home" data-page-link="home" class="flex items-center gap-3.5 group shrink-0" aria-label="RadManagement LLC Home">
-        <svg class="w-12 h-12 sm:w-14 sm:h-14 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <a href="#home" data-page-link="home" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0 shrink" aria-label="RadManagement LLC Home">
+        <svg class="w-10 h-10 sm:w-14 sm:h-14 shrink-0 transition-transform duration-300 group-hover:scale-105" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <radialGradient id="hdrGlow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35"/>
@@ -110,11 +130,11 @@
           <rect x="66.1" y="46.1" width="10.4" height="3.4" rx="1" fill="#38BDF8" />
           <rect x="69.6" y="42.6" width="3.4" height="10.4" rx="1" fill="#38BDF8" />
         </svg>
-        <div>
-          <div class="font-display font-extrabold tracking-tight text-lg sm:text-xl leading-none text-white">
+        <div class="min-w-0">
+          <div class="font-display font-extrabold tracking-tight text-base sm:text-xl leading-none text-white truncate">
             RADMANAGEMENT <span class="text-teal-surgical">LLC</span>
           </div>
-          <p class="text-[10px] sm:text-[11px] font-semibold tracking-widest text-cyan-diagnostic uppercase mt-1">
+          <p class="text-[9px] sm:text-[11px] font-semibold tracking-wider sm:tracking-widest text-cyan-diagnostic uppercase mt-1 truncate">
             Clinical Imaging &amp; Radiology Solutions
           </p>
         </div>
@@ -132,13 +152,13 @@
       </nav>
 
       <!-- Header CTA & Mobile Menu Button -->
-      <div class="flex items-center gap-3">
-        <a href="#contact" data-page-link="contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-teal-surgical hover:bg-teal-hover text-white text-xs sm:text-sm font-semibold shadow-lg shadow-teal-surgical/25 transition-all">
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+        <a href="#contact" data-page-link="contact" class="hidden sm:inline-flex items-center gap-2 px-4 lg:px-5 py-2.5 rounded-xl bg-teal-surgical hover:bg-teal-hover text-white text-xs sm:text-sm font-semibold shadow-lg shadow-teal-surgical/25 transition-all">
           <span>Request Demo</span>
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
 
-        <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" class="lg:hidden p-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white transition-colors">
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu" class="lg:hidden p-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white transition-colors">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -518,23 +538,23 @@
         </div>
 
         <!-- Sandbox Navigation Tabs -->
-        <div class="px-4 sm:px-7 pt-3 bg-navy-dark/70 border-b border-white/10 flex items-center gap-1.5 overflow-x-auto">
-          <button type="button" data-demo-tab="hub" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all bg-white text-navy">
+        <div role="tablist" aria-label="Enterprise Workspace Modules" class="px-4 sm:px-7 pt-3 bg-navy-dark/70 border-b border-white/10 flex items-center gap-1.5 overflow-x-auto">
+          <button type="button" role="tab" id="tab-btn-hub" aria-selected="true" aria-controls="demo-panel-hub" data-demo-tab="hub" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all bg-white text-navy">
             1. Application Hub
           </button>
-          <button type="button" data-demo-tab="alerts" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
+          <button type="button" role="tab" id="tab-btn-alerts" aria-selected="false" aria-controls="demo-panel-alerts" data-demo-tab="alerts" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
             2. Downtime &amp; Alerts
           </button>
-          <button type="button" data-demo-tab="protocol" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
+          <button type="button" role="tab" id="tab-btn-protocol" aria-selected="false" aria-controls="demo-panel-protocol" data-demo-tab="protocol" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
             3. Protocoling
           </button>
-          <button type="button" data-demo-tab="compliance" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
+          <button type="button" role="tab" id="tab-btn-compliance" aria-selected="false" aria-controls="demo-panel-compliance" data-demo-tab="compliance" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
             4. Compliance &amp; QA
           </button>
-          <button type="button" data-demo-tab="scheduling" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
+          <button type="button" role="tab" id="tab-btn-scheduling" aria-selected="false" aria-controls="demo-panel-scheduling" data-demo-tab="scheduling" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
             5. Scheduling &amp; Credentials
           </button>
-          <button type="button" data-demo-tab="risk" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
+          <button type="button" role="tab" id="tab-btn-risk" aria-selected="false" aria-controls="demo-panel-risk" data-demo-tab="risk" class="demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5">
             6. Risk Screening
           </button>
         </div>
@@ -545,7 +565,7 @@
           <!-- =============================================================== -->
           <!-- TAB 1: APPLICATION HUB (RadHub)                                 -->
           <!-- =============================================================== -->
-          <div id="demo-panel-hub" class="demo-panel space-y-6">
+          <div id="demo-panel-hub" role="tabpanel" aria-labelledby="tab-btn-hub" class="demo-panel space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadHub — Unified Clinical Application Launchpad</h3>
@@ -571,7 +591,7 @@
           <!-- =============================================================== -->
           <!-- TAB 2: DOWNTIME & UPGRADE ALERTS (RadPulse)                     -->
           <!-- =============================================================== -->
-          <div id="demo-panel-alerts" class="demo-panel hidden space-y-6">
+          <div id="demo-panel-alerts" role="tabpanel" aria-labelledby="tab-btn-alerts" class="demo-panel hidden space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadPulse — Downtime &amp; Upgrade Notification Engine</h3>
@@ -643,7 +663,7 @@
           <!-- =============================================================== -->
           <!-- TAB 3: PROTOCOLING & ORDER ASSIST (RadProtocol)                 -->
           <!-- =============================================================== -->
-          <div id="demo-panel-protocol" class="demo-panel hidden space-y-6">
+          <div id="demo-panel-protocol" role="tabpanel" aria-labelledby="tab-btn-protocol" class="demo-panel hidden space-y-6">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadProtocol — Exam Protocoling &amp; Order Review</h3>
@@ -659,6 +679,11 @@
               </div>
             </div>
 
+            <div class="rounded-xl bg-navy/5 border border-navy/15 px-4 py-2.5 text-xs text-slate-700 flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-navy text-cyan-diagnostic font-bold text-[10px] uppercase shrink-0">Demo Only</span>
+              <span>Simulated patient orders and protocol decision rules shown for workflow illustration only.</span>
+            </div>
+
             <div class="grid lg:grid-cols-12 gap-6">
               <div class="lg:col-span-5 space-y-3" id="protocol-queue-list"></div>
               <div class="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm" id="protocol-detail-pane"></div>
@@ -668,7 +693,7 @@
           <!-- =============================================================== -->
           <!-- TAB 4: COMPLIANCE & QA (RadComply & RadMinutes)                 -->
           <!-- =============================================================== -->
-          <div id="demo-panel-compliance" class="demo-panel hidden space-y-6">
+          <div id="demo-panel-compliance" role="tabpanel" aria-labelledby="tab-btn-compliance" class="demo-panel hidden space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadComply &amp; RadMinutes — Infrastructure, Modality QA &amp; Automated Minutes</h3>
@@ -717,7 +742,7 @@
                   <span class="w-2 h-2 rounded-full bg-status-emerald animate-pulse"></span>
                 </div>
                 <p class="text-xs font-semibold text-white mt-1">Monthly QA &amp; RSO Minutes Ready</p>
-                <button type="button" onclick="showToast('RadMinutes Exported', 'Automated Monthly QA, Radiation Safety, Project & Vendor Support minutes compiled for compliance binder.', 'emerald')" class="mt-2 px-2.5 py-1 rounded-lg bg-teal-surgical hover:bg-teal-hover text-white text-[11px] font-semibold transition-colors">
+                <button type="button" data-action="export-minutes" class="mt-2 px-2.5 py-1 rounded-lg bg-teal-surgical hover:bg-teal-hover text-white text-[11px] font-semibold transition-colors">
                   Record / Export Minutes
                 </button>
               </div>
@@ -745,7 +770,7 @@
           <!-- =============================================================== -->
           <!-- TAB 5: SCHEDULING, LICENSES, REGISTRATIONS & CME MANAGEMENT     -->
           <!-- =============================================================== -->
-          <div id="demo-panel-scheduling" class="demo-panel hidden space-y-6">
+          <div id="demo-panel-scheduling" role="tabpanel" aria-labelledby="tab-btn-scheduling" class="demo-panel hidden space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadRoster — Radiologist &amp; Technologist Scheduling, Licenses &amp; CME Management</h3>
@@ -823,15 +848,23 @@
           <!-- =============================================================== -->
           <!-- TAB 6: PATIENT RISK SCREENING (RadScreen)                       -->
           <!-- =============================================================== -->
-          <div id="demo-panel-risk" class="demo-panel hidden space-y-6">
+          <div id="demo-panel-risk" role="tabpanel" aria-labelledby="tab-btn-risk" class="demo-panel hidden space-y-6">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
               <div>
                 <h3 class="font-display text-xl font-bold text-navy">RadScreen — Patient Risk Assessments &amp; Pre-Exam Safety</h3>
-                <p class="text-sm text-slate-600 mt-0.5">Run lifetime breast/oncology risk stratification and pre-exam MRI/contrast safety screening to guide early detection and protocol safety.</p>
+                <p class="text-sm text-slate-600 mt-0.5">Run simulated lifetime breast/oncology risk stratification and pre-exam MRI/contrast safety screening workflows.</p>
               </div>
               <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-surgical/10 text-teal-surgical border border-teal-surgical/25 text-xs font-bold self-start lg:self-auto">
-                Patient Profile: Test name • Automated Risk Engine
+                Patient Profile: Test name • Interactive Workflow Demo
               </span>
+            </div>
+
+            <!-- Regulatory & Clinical Simulation Disclaimer -->
+            <div class="rounded-xl bg-status-amber/15 border border-status-amber/40 px-4 py-3 text-xs text-navy flex items-start gap-2.5">
+              <span class="px-2 py-0.5 rounded bg-navy text-amber-300 font-bold text-[10px] uppercase tracking-wider shrink-0 mt-0.5">Simulation Notice</span>
+              <p class="leading-relaxed">
+                <strong>Interactive Workflow Demonstration Only:</strong> Risk percentages, threshold tiers, and clearance flags in this sandbox use simplified illustrative logic and are <strong>not validated for clinical diagnosis or medical decision-making</strong>. Production deployments integrate your institution's approved risk engines and clinical governance rules.
+              </p>
             </div>
 
             <div class="grid lg:grid-cols-12 gap-6">
@@ -839,9 +872,11 @@
               <div class="lg:col-span-7 bg-white rounded-xl border border-slate-200 p-5 sm:p-6 shadow-sm space-y-4">
                 <div class="flex items-center justify-between border-b border-slate-100 pb-3">
                   <div>
-                    <h4 class="font-bold text-navy text-sm">Lifetime Breast &amp; Supplemental Screening Risk Assessment</h4>
-                    <p class="text-xs text-slate-500">Tyrer-Cuzick / Density &amp; Family History Stratification (Test name)</p>
+                    <h4 class="font-bold text-navy text-sm">Simulated Breast &amp; Supplemental Screening Risk Model</h4>
+                    <p class="text-xs text-slate-500">Illustrative Density &amp; Family History Stratification (Demo Logic • Test name)</p>
                   </div>
+                  <span class="px-2.5 py-1 rounded-lg bg-ice text-navy font-bold text-[11px] border border-slate-200">Demo Model</span>
+                </div>
                   <span class="px-2.5 py-1 rounded-lg bg-ice text-navy font-bold text-[11px] border border-slate-200">ACR / NCCN Logic</span>
                 </div>
 
@@ -960,7 +995,7 @@
           <p class="text-slate-300 text-base leading-relaxed">
             Eliminate the last-minute scramble before accreditation surveys. RadManagement turns routine equipment QA, radiation safety documentation, and staff credentialing into structured, timestamped daily workflows.
           </p>
-          <button type="button" onclick="openDemoTab('compliance')" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal-surgical hover:bg-teal-hover text-white text-sm font-semibold transition-all">
+          <button type="button" data-action="open-demo-tab" data-tab="compliance" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-teal-surgical hover:bg-teal-hover text-white text-sm font-semibold transition-all">
             Inspect Compliance Dashboard
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </button>
@@ -1036,7 +1071,7 @@
                     <p class="text-sm font-bold text-navy group-hover:text-teal-surgical transition-colors truncate">Engage@radmanagement.org</p>
                   </div>
                 </a>
-                <button type="button" onclick="copyTextToClipboard('Engage@radmanagement.org', 'Engagement Email Copied')" class="shrink-0 p-2 rounded-lg bg-white border border-slate-200 hover:border-teal-surgical text-slate-600 hover:text-navy transition-colors" title="Copy Engage@radmanagement.org">
+                <button type="button" data-action="copy-text" data-copy="Engage@radmanagement.org" data-copy-title="Engagement Email Copied" class="shrink-0 p-2 rounded-lg bg-white border border-slate-200 hover:border-teal-surgical text-slate-600 hover:text-navy transition-colors" title="Copy Engage@radmanagement.org">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                 </button>
               </div>
@@ -1052,14 +1087,14 @@
                     <p class="text-sm font-bold text-navy group-hover:text-teal-surgical transition-colors truncate">Support@radmanagement.org</p>
                   </div>
                 </a>
-                <button type="button" onclick="copyTextToClipboard('Support@radmanagement.org', 'Support Email Copied')" class="shrink-0 p-2 rounded-lg bg-white border border-slate-200 hover:border-teal-surgical text-slate-600 hover:text-navy transition-colors" title="Copy Support@radmanagement.org">
+                <button type="button" data-action="copy-text" data-copy="Support@radmanagement.org" data-copy-title="Support Email Copied" class="shrink-0 p-2 rounded-lg bg-white border border-slate-200 hover:border-teal-surgical text-slate-600 hover:text-navy transition-colors" title="Copy Support@radmanagement.org">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                 </button>
               </div>
 
               <!-- Website & Phone Row -->
               <div class="flex items-center justify-between text-xs text-slate-600 pt-1 px-1">
-                <span>Web Portal: <a href="https://radmanagement.org" target="_blank" rel="noopener noreferrer" class="font-bold text-navy hover:text-teal-surgical">radmanagement.org</a></span>
+                <span>Web Portal: <a href="https://radmgmt.org" target="_blank" rel="noopener noreferrer" class="font-bold text-navy hover:text-teal-surgical">radmgmt.org</a></span>
                 <span>Line: <a href="tel:9146762558" class="font-bold text-navy hover:text-teal-surgical">914-676-2558</a></span>
               </div>
             </div>
@@ -1141,11 +1176,11 @@
                 </button>
               </div>
 
-              <a href="https://radmanagement.org" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-3 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
+              <a href="https://radmgmt.org" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-3 py-2 rounded-full bg-white/10 hover:bg-white/15 border border-white/10 transition-colors">
                 <span class="w-8 h-8 rounded-full bg-teal-surgical text-navy-dark flex items-center justify-center shrink-0">
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
                 </span>
-                <span class="text-sm font-semibold text-white">radmanagement.org</span>
+                <span class="text-sm font-semibold text-white">radmgmt.org</span>
               </a>
             </div>
 
@@ -1244,6 +1279,10 @@
               <textarea id="lead-message" name="message" rows="3" placeholder="Tell us about your current imaging modalities, PACS/RIS environment, or upcoming accreditation timelines..." class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-teal-surgical focus:border-teal-surgical"></textarea>
             </div>
 
+            <p class="text-[11px] text-slate-500">
+              Please do not include Protected Health Information (PHI) or patient identifiers in this inquiry form.
+            </p>
+
             <!-- Inline Validation Error Box -->
             <div id="form-error-box" class="hidden rounded-xl bg-status-crimson/10 border border-status-crimson/30 p-3 text-xs font-medium text-status-crimson"></div>
 
@@ -1278,7 +1317,7 @@
   <!-- ===================================================================== -->
   <!-- FULL-SCREEN APPLICATION SHOWCASE LIGHTBOX MODAL                       -->
   <!-- ===================================================================== -->
-  <div id="mockup-lightbox" class="hidden fixed inset-0 z-50 bg-navy-dark/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+  <div id="mockup-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" class="hidden fixed inset-0 z-50 bg-navy-dark/95 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
     <div class="w-full max-w-6xl bg-navy border border-white/15 rounded-3xl p-5 sm:p-7 shadow-2xl my-auto">
       <div class="flex items-start justify-between gap-4 pb-4 mb-4 border-b border-white/10">
         <div>
@@ -1331,7 +1370,7 @@
 
       <div class="pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-slate-400">
         <p>&copy; 2026 RadManagement LLC. All rights reserved.</p>
-        <p>Engage: <a href="mailto:Engage@radmanagement.org" class="text-slate-300 hover:text-cyan-diagnostic">Engage@radmanagement.org</a> &bull; Support: <a href="mailto:Support@radmanagement.org" class="text-slate-300 hover:text-cyan-diagnostic">Support@radmanagement.org</a> &bull; radmanagement.org</p>
+        <p>Engage: <a href="mailto:Engage@radmanagement.org" class="text-slate-300 hover:text-cyan-diagnostic">Engage@radmanagement.org</a> &bull; Support: <a href="mailto:Support@radmanagement.org" class="text-slate-300 hover:text-cyan-diagnostic">Support@radmanagement.org</a> &bull; <a href="https://radmgmt.org" class="text-slate-300 hover:text-cyan-diagnostic">radmgmt.org</a></p>
       </div>
     </div>
   </footer>
@@ -1341,8 +1380,17 @@
   <!-- ===================================================================== -->
   <script>
     /* --------------------------------------------------------------------- */
-    /* 0. TOAST NOTIFICATIONS, CLIPBOARD, VCARD & MULTI-PAGE ROUTER          */
+    /* 0. HTML ESCAPING, TOASTS, CLIPBOARD, VCARD & MULTI-PAGE ROUTER        */
     /* --------------------------------------------------------------------- */
+    function escapeHtml(value) {
+      return String(value ?? '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
     function showToast(title, message, tone = 'teal') {
       const container = document.getElementById('toast-container');
       if (!container) return;
@@ -1365,8 +1413,8 @@
         <div class="flex items-start gap-3">
           <span class="w-2.5 h-2.5 rounded-full mt-1 shrink-0 ${dotMap[tone] || dotMap.teal}"></span>
           <div class="min-w-0">
-            <p class="text-xs font-bold text-white">${title}</p>
-            <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">${message}</p>
+            <p class="text-xs font-bold text-white">${escapeHtml(title)}</p>
+            <p class="text-xs text-slate-300 mt-0.5 leading-relaxed">${escapeHtml(message)}</p>
           </div>
         </div>
       `;
@@ -1421,7 +1469,9 @@
       });
 
       const mobileMenu = document.getElementById('mobile-menu');
+      const mobileBtn = document.getElementById('mobile-menu-btn');
       if (mobileMenu) mobileMenu.classList.add('hidden');
+      if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
 
       if (pushHash && window.location.hash !== `#${targetId}`) {
         window.history.pushState(null, '', `#${targetId}`);
@@ -1444,7 +1494,9 @@
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     if (mobileMenuBtn) {
       mobileMenuBtn.addEventListener('click', () => {
-        document.getElementById('mobile-menu').classList.toggle('hidden');
+        const menu = document.getElementById('mobile-menu');
+        const isHidden = menu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', String(!isHidden));
       });
     }
 
@@ -1467,7 +1519,7 @@
           'TITLE:Founder & Principal',
           'TEL;TYPE=CELL,VOICE:+19146762558',
           'EMAIL;TYPE=WORK,INTERNET:Nicholas.Hopkins@radmanagement.org',
-          'URL:https://radmanagement.org',
+          'URL:https://radmgmt.org',
           'NOTE:Optimizing & Automating Imaging Workflows',
           'END:VCARD'
         ].join('\r\n');
@@ -1507,14 +1559,14 @@
       const filtered = pillar === 'all' ? platformModules : platformModules.filter(m => m.pillar === pillar);
 
       grid.innerHTML = filtered.map(m => `
-        <button type="button" onclick="openDemoTab('${m.demoTab}')" class="text-left rounded-2xl bg-white border border-slate-200 hover:border-teal-surgical p-5 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between gap-4 group">
+        <button type="button" data-action="open-demo-tab" data-tab="${escapeHtml(m.demoTab)}" class="text-left rounded-2xl bg-white border border-slate-200 hover:border-teal-surgical p-5 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between gap-4 group">
           <div>
             <div class="flex items-center justify-between gap-2 mb-2.5">
-              <span class="px-2.5 py-1 rounded-lg bg-navy text-cyan-diagnostic font-display font-bold text-[10px] tracking-wider">${m.code}</span>
-              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">${m.pillar}</span>
+              <span class="px-2.5 py-1 rounded-lg bg-navy text-cyan-diagnostic font-display font-bold text-[10px] tracking-wider">${escapeHtml(m.code)}</span>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-slate-400">${escapeHtml(m.pillar)}</span>
             </div>
-            <h3 class="font-display font-bold text-base text-navy group-hover:text-teal-surgical transition-colors">${m.name}</h3>
-            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">${m.desc}</p>
+            <h3 class="font-display font-bold text-base text-navy group-hover:text-teal-surgical transition-colors">${escapeHtml(m.name)}</h3>
+            <p class="text-xs text-slate-600 mt-1.5 leading-relaxed">${escapeHtml(m.desc)}</p>
           </div>
           <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-teal-surgical">
             <span>Open Live Workspace</span>
@@ -1542,6 +1594,7 @@
 
       document.querySelectorAll('.demo-tab').forEach(btn => {
         const active = btn.dataset.demoTab === tabKey;
+        btn.setAttribute('aria-selected', String(active));
         btn.className = active
           ? 'demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all bg-white text-navy'
           : 'demo-tab shrink-0 px-4 py-3 rounded-t-xl text-xs sm:text-sm font-semibold transition-all text-slate-300 hover:text-white hover:bg-white/5';
@@ -1590,15 +1643,15 @@
         <div class="bg-white rounded-xl border border-slate-200 p-4 shadow-sm flex flex-col justify-between gap-3 hover:border-teal-surgical transition-colors">
           <div>
             <div class="flex items-center justify-between gap-2 mb-1.5">
-              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-surgical">${app.category}</span>
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-surgical">${escapeHtml(app.category)}</span>
               <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-emerald/15 text-emerald-800 text-[10px] font-bold">
-                <span class="w-1.5 h-1.5 rounded-full bg-status-emerald"></span>${app.status}
+                <span class="w-1.5 h-1.5 rounded-full bg-status-emerald"></span>${escapeHtml(app.status)}
               </span>
             </div>
-            <h4 class="font-display font-bold text-sm text-navy">${app.name}</h4>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${app.desc}</p>
+            <h4 class="font-display font-bold text-sm text-navy">${escapeHtml(app.name)}</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${escapeHtml(app.desc)}</p>
           </div>
-          <button type="button" onclick="showToast('Launching ${app.name}', 'SSO session authenticated. Opening workspace in context.', 'teal')" class="w-full py-2 rounded-lg bg-navy hover:bg-teal-surgical text-white text-xs font-semibold transition-colors">
+          <button type="button" data-action="launch-hub-app" data-app-name="${escapeHtml(app.name)}" class="w-full py-2 rounded-lg bg-navy hover:bg-teal-surgical text-white text-xs font-semibold transition-colors">
             Launch Application &nearr;
           </button>
         </div>
@@ -1750,15 +1803,15 @@
       listEl.innerHTML = protocolQueue.map(item => {
         const isSelected = item.id === activeProtocolId;
         return `
-          <button type="button" onclick="selectProtocolOrder('${item.id}')" class="w-full text-left p-4 rounded-xl border transition-all ${isSelected ? 'bg-navy text-white border-navy shadow-md' : 'bg-white text-charcoal border-slate-200 hover:border-teal-surgical'}">
+          <button type="button" data-action="select-protocol" data-order-id="${escapeHtml(item.id)}" class="w-full text-left p-4 rounded-xl border transition-all ${isSelected ? 'bg-navy text-white border-navy shadow-md' : 'bg-white text-charcoal border-slate-200 hover:border-teal-surgical'}">
             <div class="flex items-center justify-between gap-2">
-              <span class="text-[11px] font-mono font-bold ${isSelected ? 'text-cyan-diagnostic' : 'text-teal-surgical'}">${item.id} &bull; ${item.patient}</span>
+              <span class="text-[11px] font-mono font-bold ${isSelected ? 'text-cyan-diagnostic' : 'text-teal-surgical'}">${escapeHtml(item.id)} &bull; ${escapeHtml(item.patient)}</span>
               <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${item.approved ? 'bg-status-emerald/20 text-status-emerald' : (item.priority === 'STAT' ? 'bg-status-crimson/20 text-status-crimson' : 'bg-status-amber/20 text-amber-700')}">
-                ${item.approved ? 'Approved' : item.priority}
+                ${item.approved ? 'Approved' : escapeHtml(item.priority)}
               </span>
             </div>
-            <p class="font-display font-bold text-sm mt-1 ${isSelected ? 'text-white' : 'text-navy'}">${item.exam}</p>
-            <p class="text-[11px] mt-1 line-clamp-1 ${isSelected ? 'text-slate-300' : 'text-slate-500'}">${item.indication}</p>
+            <p class="font-display font-bold text-sm mt-1 ${isSelected ? 'text-white' : 'text-navy'}">${escapeHtml(item.exam)}</p>
+            <p class="text-[11px] mt-1 line-clamp-1 ${isSelected ? 'text-slate-300' : 'text-slate-500'}">${escapeHtml(item.indication)}</p>
           </button>
         `;
       }).join('');
@@ -1768,8 +1821,8 @@
         <div class="space-y-4">
           <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-100">
             <div>
-              <span class="text-xs font-bold text-teal-surgical">${active.id} &bull; ${active.mrn}</span>
-              <h4 class="font-display font-bold text-lg text-navy">${active.exam}</h4>
+              <span class="text-xs font-bold text-teal-surgical">${escapeHtml(active.id)} &bull; ${escapeHtml(active.mrn)}</span>
+              <h4 class="font-display font-bold text-lg text-navy">${escapeHtml(active.exam)}</h4>
             </div>
             <span class="px-3 py-1 rounded-full text-xs font-bold ${active.approved ? 'bg-status-emerald/15 text-emerald-800' : 'bg-status-amber/15 text-amber-800'}">
               ${active.approved ? 'Protocol Signed Off' : 'Awaiting Radiologist Sign-Off'}
@@ -1778,29 +1831,29 @@
 
           <div class="rounded-xl bg-ice p-3.5 border border-slate-200/80 space-y-1">
             <p class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Clinical Indication</p>
-            <p class="text-xs sm:text-sm font-medium text-navy">${active.indication}</p>
+            <p class="text-xs sm:text-sm font-medium text-navy">${escapeHtml(active.indication)}</p>
           </div>
 
           <div class="grid sm:grid-cols-2 gap-3 text-xs">
             <div class="p-3 rounded-xl border border-slate-200 bg-white">
               <span class="text-slate-400 font-bold uppercase text-[10px] block">Renal / Lab Check</span>
-              <span class="font-bold text-status-emerald mt-0.5 block">${active.egfr}</span>
+              <span class="font-bold text-status-emerald mt-0.5 block">${escapeHtml(active.egfr)}</span>
             </div>
             <div class="p-3 rounded-xl border border-slate-200 bg-white">
               <span class="text-slate-400 font-bold uppercase text-[10px] block">Allergy Verification</span>
-              <span class="font-bold text-navy mt-0.5 block">${active.allergies}</span>
+              <span class="font-bold text-navy mt-0.5 block">${escapeHtml(active.allergies)}</span>
             </div>
           </div>
 
           <div>
             <label for="protocol-select" class="block text-xs font-bold text-navy mb-1.5">Assigned Acquisition Protocol</label>
-            <select id="protocol-select" onchange="updateSelectedProtocol('${active.id}', this.value)" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal-surgical">
-              ${active.options.map(opt => `<option value="${opt}" ${opt === active.selectedProtocol ? 'selected' : ''}>${opt}</option>`).join('')}
+            <select id="protocol-select" data-action="change-protocol" data-order-id="${escapeHtml(active.id)}" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm font-semibold text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal-surgical">
+              ${active.options.map(opt => `<option value="${escapeHtml(opt)}" ${opt === active.selectedProtocol ? 'selected' : ''}>${escapeHtml(opt)}</option>`).join('')}
             </select>
           </div>
 
           <div class="pt-2 flex items-center justify-end gap-3">
-            <button type="button" onclick="approveProtocolOrder('${active.id}')" class="px-6 py-2.5 rounded-xl ${active.approved ? 'bg-status-emerald text-white' : 'bg-teal-surgical hover:bg-teal-hover text-white'} text-xs sm:text-sm font-bold shadow-sm transition-colors">
+            <button type="button" data-action="approve-protocol" data-order-id="${escapeHtml(active.id)}" class="px-6 py-2.5 rounded-xl ${active.approved ? 'bg-status-emerald text-white' : 'bg-teal-surgical hover:bg-teal-hover text-white'} text-xs sm:text-sm font-bold shadow-sm transition-colors">
               ${active.approved ? '✓ Protocol Approved & Sent to Modality' : 'Approve & Send to Modality Worklist'}
             </button>
           </div>
@@ -1860,12 +1913,12 @@
       const rows = currentRegFilter === 'all' ? complianceItems : complianceItems.filter(i => i.agency === currentRegFilter);
       tbody.innerHTML = rows.map(item => `
         <tr class="hover:bg-ice/60 transition-colors">
-          <td class="py-3 px-4 font-semibold text-navy">${item.task}</td>
-          <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-navy/5 text-navy font-bold text-xs">${item.agency}</span></td>
-          <td class="py-3 px-4 text-xs text-slate-600">${item.asset}</td>
-          <td class="py-3 px-4 text-xs font-medium ${item.verified ? 'text-slate-500' : 'text-amber-700 font-bold'}">${item.verified ? 'Verified' : item.due}</td>
+          <td class="py-3 px-4 font-semibold text-navy">${escapeHtml(item.task)}</td>
+          <td class="py-3 px-4"><span class="px-2 py-0.5 rounded bg-navy/5 text-navy font-bold text-xs">${escapeHtml(item.agency)}</span></td>
+          <td class="py-3 px-4 text-xs text-slate-600">${escapeHtml(item.asset)}</td>
+          <td class="py-3 px-4 text-xs font-medium ${item.verified ? 'text-slate-500' : 'text-amber-700 font-bold'}">${item.verified ? 'Verified' : escapeHtml(item.due)}</td>
           <td class="py-3 px-4 text-right">
-            <button type="button" onclick="toggleComplianceItem('${item.id}')" class="px-3 py-1 rounded-lg text-xs font-bold transition-colors ${item.verified ? 'bg-status-emerald/15 text-emerald-800 hover:bg-status-emerald/25' : 'bg-teal-surgical hover:bg-teal-hover text-white'}">
+            <button type="button" data-action="toggle-compliance" data-qa-id="${escapeHtml(item.id)}" class="px-3 py-1 rounded-lg text-xs font-bold transition-colors ${item.verified ? 'bg-status-emerald/15 text-emerald-800 hover:bg-status-emerald/25' : 'bg-teal-surgical hover:bg-teal-hover text-white'}">
               ${item.verified ? '✓ Verified' : 'Sign Off QA'}
             </button>
           </td>
@@ -1930,11 +1983,11 @@
         return `
           <tr class="hover:bg-ice/60 transition-colors">
             <td class="py-3 px-4">
-              <div class="font-bold text-navy">${s.name}</div>
-              <span class="text-[11px] font-semibold text-teal-surgical">${s.role}</span>
+              <div class="font-bold text-navy">${escapeHtml(s.name)}</div>
+              <span class="text-[11px] font-semibold text-teal-surgical">${escapeHtml(s.role)}</span>
             </td>
-            <td class="py-3 px-4 text-xs text-slate-700 font-medium">${s.shift}</td>
-            <td class="py-3 px-4 text-xs text-navy font-medium">${s.licenses}</td>
+            <td class="py-3 px-4 text-xs text-slate-700 font-medium">${escapeHtml(s.shift)}</td>
+            <td class="py-3 px-4 text-xs text-navy font-medium">${escapeHtml(s.licenses)}</td>
             <td class="py-3 px-4">
               <div class="flex items-center justify-between text-[11px] font-bold text-navy mb-1">
                 <span>${s.cmeEarned} / ${s.cmeReq} Credits</span>
@@ -1946,14 +1999,14 @@
             </td>
             <td class="py-3 px-4">
               <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold ${s.alert ? 'bg-status-amber/20 text-amber-900' : 'bg-status-emerald/15 text-emerald-800'}">
-                ${s.alertText}
+                ${escapeHtml(s.alertText)}
               </span>
             </td>
             <td class="py-3 px-4 text-right space-x-1.5 whitespace-nowrap">
-              <button type="button" onclick="logStaffCme('${s.id}')" class="px-2.5 py-1 rounded-lg bg-ice hover:bg-slate-200 border border-slate-200 text-navy font-semibold text-[11px]">
+              <button type="button" data-action="log-cme" data-staff-id="${escapeHtml(s.id)}" class="px-2.5 py-1 rounded-lg bg-ice hover:bg-slate-200 border border-slate-200 text-navy font-semibold text-[11px]">
                 + Log CME
               </button>
-              <button type="button" onclick="showToast('Alert Sent', 'Automated renewal & schedule reminder dispatched to ${s.name}.', 'teal')" class="px-2.5 py-1 rounded-lg bg-navy hover:bg-teal-surgical text-white font-semibold text-[11px] transition-colors">
+              <button type="button" data-action="notify-staff" data-staff-name="${escapeHtml(s.name)}" class="px-2.5 py-1 rounded-lg bg-navy hover:bg-teal-surgical text-white font-semibold text-[11px] transition-colors">
                 Notify
               </button>
             </td>
@@ -2320,7 +2373,7 @@
         badge: 'RadScreen • Risk Assessment Hub',
         title: 'Risk Assessment Hub & Early Detection Engine',
         category: 'clinical',
-        summary: 'Automated lifetime risk stratification (Tyrer-Cuzick & Gail models), breast density & genetic history evaluation, and supplemental MRI/US screening triggers.',
+        summary: 'Automated lifetime risk stratification workflows, breast density and genetic history evaluation, and supplemental MRI/US screening triggers.',
         renderUI: (full) => `
           <div class="rounded-xl overflow-hidden border border-slate-200 bg-slate-50 text-charcoal text-left">
             <div class="bg-navy px-4 py-2.5 flex items-center justify-between text-white">
@@ -2343,7 +2396,7 @@
                   <thead class="bg-slate-100 text-slate-500 text-[9px] uppercase">
                     <tr>
                       <th class="py-2 px-2.5">Patient</th>
-                      <th class="py-2 px-2.5">Tyrer-Cuzick Score</th>
+                      <th class="py-2 px-2.5">Lifetime Risk Score</th>
                       <th class="py-2 px-2.5">Density / Factors</th>
                       <th class="py-2 px-2.5">Recommended Action</th>
                     </tr>
@@ -2881,24 +2934,36 @@
         <div class="rounded-2xl bg-white/5 border border-white/10 p-5 flex flex-col gap-4 hover:border-cyan-diagnostic/50 transition-all">
           <div class="flex items-start justify-between gap-3 flex-none">
             <div class="min-w-0">
-              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-diagnostic block truncate">${m.badge}</span>
-              <h3 class="font-display text-lg font-bold text-white mt-0.5 leading-snug">${m.title}</h3>
-              <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">${m.summary}</p>
+              <span class="text-[11px] font-bold uppercase tracking-wider text-cyan-diagnostic block truncate">${escapeHtml(m.badge)}</span>
+              <h3 class="font-display text-lg font-bold text-white mt-0.5 leading-snug">${escapeHtml(m.title)}</h3>
+              <p class="text-xs text-slate-300 mt-1.5 leading-relaxed">${escapeHtml(m.summary)}</p>
             </div>
-            <button type="button" onclick="openMockupLightbox('${m.id}')" class="shrink-0 px-3 py-1.5 rounded-lg bg-teal-surgical hover:bg-teal-hover text-white text-xs font-semibold transition-colors">
+            <button type="button" data-action="open-lightbox" data-mockup-id="${escapeHtml(m.id)}" class="shrink-0 px-3 py-1.5 rounded-lg bg-teal-surgical hover:bg-teal-hover text-white text-xs font-semibold transition-colors">
               Expand
             </button>
           </div>
-          <div onclick="openMockupLightbox('${m.id}')" class="cursor-pointer transition-transform duration-200 hover:scale-[1.01]">
+          <div data-action="open-lightbox" data-mockup-id="${escapeHtml(m.id)}" class="cursor-pointer transition-transform duration-200 hover:scale-[1.01]">
             ${m.renderUI(false)}
           </div>
         </div>
       `).join('');
     }
 
+    let lastFocusedElement = null;
+
+    function closeMockupLightbox() {
+      const modal = document.getElementById('mockup-lightbox');
+      if (!modal || modal.classList.contains('hidden')) return;
+      modal.classList.add('hidden');
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
+      }
+    }
+
     function openMockupLightbox(id) {
       const item = enterpriseMockups.find(m => m.id === id);
       if (!item) return;
+      lastFocusedElement = document.activeElement;
       document.getElementById('lightbox-badge').textContent = item.badge;
       document.getElementById('lightbox-title').textContent = item.title;
 
@@ -2906,14 +2971,14 @@
       if (item.imageSrc) {
         body.innerHTML = `
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
-            <p class="text-sm text-slate-300">${item.summary}</p>
+            <p class="text-sm text-slate-300">${escapeHtml(item.summary)}</p>
             <div id="lightbox-view-switcher" class="inline-flex items-center gap-1 p-1 rounded-xl bg-white/10 border border-white/15 shrink-0 self-start sm:self-auto">
               <button type="button" id="lb-mode-img" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-teal-surgical text-white">Application Screenshot</button>
               <button type="button" id="lb-mode-ui" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-300 hover:text-white">Interactive UI View</button>
             </div>
           </div>
           <div id="lb-image-container" class="rounded-2xl overflow-hidden border border-white/15 bg-navy shadow-2xl">
-            <img id="lb-generated-img" src="${item.imageSrc}" alt="${item.title}" class="w-full h-auto max-h-[76vh] object-contain mx-auto block" />
+            <img id="lb-generated-img" src="${escapeHtml(item.imageSrc)}" alt="${escapeHtml(item.title)}" class="w-full h-auto max-h-[76vh] object-contain mx-auto block" />
           </div>
           <div id="lb-ui-container" class="hidden">
             ${item.renderUI(true)}
@@ -2948,24 +3013,80 @@
         });
       } else {
         body.innerHTML = `
-          <p class="text-sm text-slate-300 mb-4">${item.summary}</p>
+          <p class="text-sm text-slate-300 mb-4">${escapeHtml(item.summary)}</p>
           ${item.renderUI(true)}
         `;
       }
 
-      document.getElementById('mockup-lightbox').classList.remove('hidden');
+      const modal = document.getElementById('mockup-lightbox');
+      modal.classList.remove('hidden');
+      document.getElementById('close-lightbox-btn')?.focus();
     }
 
     const lightboxModal = document.getElementById('mockup-lightbox');
-    document.getElementById('close-lightbox-btn').addEventListener('click', () => {
-      lightboxModal.classList.add('hidden');
-    });
+    document.getElementById('close-lightbox-btn').addEventListener('click', closeMockupLightbox);
     lightboxModal.addEventListener('click', (e) => {
-      if (e.target === lightboxModal) lightboxModal.classList.add('hidden');
+      if (e.target === lightboxModal) closeMockupLightbox();
     });
     window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
-        lightboxModal.classList.add('hidden');
+      if (lightboxModal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') {
+        closeMockupLightbox();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const focusables = Array.from(lightboxModal.querySelectorAll('button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'))
+          .filter(el => el.offsetParent !== null);
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    /* --------------------------------------------------------------------- */
+    /* 7. CENTRALIZED DELEGATED EVENT LISTENERS (CSP-FRIENDLY)               */
+    /* --------------------------------------------------------------------- */
+    document.addEventListener('click', (e) => {
+      const actionEl = e.target.closest('[data-action]');
+      if (!actionEl) return;
+
+      const action = actionEl.dataset.action;
+      if (action === 'open-demo-tab') {
+        openDemoTab(actionEl.dataset.tab || 'hub');
+      } else if (action === 'copy-text') {
+        copyTextToClipboard(actionEl.dataset.copy || '', actionEl.dataset.copyTitle || 'Copied to Clipboard');
+      } else if (action === 'export-minutes') {
+        showToast('RadMinutes Exported', 'Automated Monthly QA, Radiation Safety, Project & Vendor Support minutes compiled for compliance binder.', 'emerald');
+      } else if (action === 'launch-hub-app') {
+        const appName = actionEl.dataset.appName || 'Application';
+        showToast(`Launching ${appName}`, 'SSO session authenticated. Opening workspace in context.', 'teal');
+      } else if (action === 'select-protocol') {
+        selectProtocolOrder(actionEl.dataset.orderId);
+      } else if (action === 'approve-protocol') {
+        approveProtocolOrder(actionEl.dataset.orderId);
+      } else if (action === 'toggle-compliance') {
+        toggleComplianceItem(actionEl.dataset.qaId);
+      } else if (action === 'log-cme') {
+        logStaffCme(actionEl.dataset.staffId);
+      } else if (action === 'notify-staff') {
+        const staffName = actionEl.dataset.staffName || 'Staff Member';
+        showToast('Alert Sent', `Automated renewal & schedule reminder dispatched to ${staffName}.`, 'teal');
+      } else if (action === 'open-lightbox') {
+        openMockupLightbox(actionEl.dataset.mockupId);
+      }
+    });
+
+    document.addEventListener('change', (e) => {
+      const actionEl = e.target.closest('[data-action="change-protocol"]');
+      if (actionEl) {
+        updateSelectedProtocol(actionEl.dataset.orderId, actionEl.value);
       }
     });
 
