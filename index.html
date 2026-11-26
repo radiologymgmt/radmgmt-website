@@ -2216,7 +2216,7 @@
 
       if (deliveredViaApi) {
         formMailtoFallback.classList.add('hidden');
-        formSuccessSummary.textContent = `Thank you, ${name}. Your ${channel} inquiry for ${org}${moduleNote} has been forwarded directly to nicholas.hopkins@radmanagement.org.`;
+        formSuccessSummary.textContent = `Thank you, ${name}. Your ${channel} inquiry for ${org}${moduleNote} has sent`;
         showToast('Inquiry Delivered', `Forwarded (${channel}) to nicholas.hopkins@radmanagement.org.`, 'emerald');
       } else {
         formMailtoFallback.classList.remove('hidden');
